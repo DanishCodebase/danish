@@ -56,9 +56,9 @@ export function OrbitRotation({
   const iconsPerOrbit = Math.ceil(icons.length / orbitCount);
 
   const sizeClasses = {
-    sm: "w-52 h-52",
-    md: "w-32 h-32",
-    lg: "w-40 h-40",
+    sm: "w-56 h-56",
+    md: "w-60 h-60",
+    lg: "w-64 h-64",
   };
 
   const iconSizeClasses = {
