@@ -12,6 +12,7 @@ import {
   FaNodeJs,
   FaReact,
   FaTwitter,
+  FaArrowRight,
 } from "react-icons/fa";
 import {
   SiFacebook,
@@ -24,6 +25,7 @@ import {
 import { OrbitRotation } from "@/components/ui/orbit-rotation";
 import { Button } from "@/components/ui/button";
 import { Cover } from "@/components/ui/cover";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 export default function Home() {
   const techIcons = [
@@ -148,7 +150,9 @@ export default function Home() {
               <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
               <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-blue-500 rounded-sm"></div> */}
             <span className="text-3xl font-normal tracking-widest uppercase">
-              <Cover className="inline-flex items-center px-3 gap-3 text-gray-500">Danish <span>👋</span></Cover>
+              <Cover className="inline-flex items-center px-3 gap-3 text-gray-500">
+                Danish <span>👋</span>
+              </Cover>
             </span>
           </motion.div>
 
@@ -205,35 +209,32 @@ export default function Home() {
           >
             <div className="flex items-center gap-3 sm:gap-4">
               <motion.div whileHover={buttonHover} whileTap={{ scale: 0.98 }}>
-                <Button
-                  size="lg"
-                  className="bg-gray-900 hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                >
-                  View My Portfolio
-                </Button>
+                <ShimmerButton className="shadow-2xl">
+                  <span className="text-center text-sm leading-none font-medium tracking-tight whitespace-pre-wrap text-white lg:text-lg dark:from-white dark:to-slate-900/10">
+                    View Project
+                  </span>
+                </ShimmerButton>
               </motion.div>
             </div>
 
             <motion.div whileHover={buttonHover} whileTap={{ scale: 0.98 }}>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Hire Me
-              </Button>
+              <ShimmerButton className="shadow-destructive" background="#eee" shimmerColor="#000000">
+                <span className="text-center text-sm leading-none font-medium tracking-tight whitespace-pre-wrap text-black lg:text-lg dark:from-white dark:to-slate-900/10">
+                  Hire Me
+                </span>
+              </ShimmerButton>
             </motion.div>
           </motion.div>
         </motion.div>
 
         {/* Right Section - OrbitRotation */}
         <motion.div
-          className="w-full lg:w-1/2 lg:flex-[0.45] flex items-center justify-center"
+          className="w-full h-full lg:w-1/2 lg:flex-[0.45] flex items-center justify-center"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
+          <div className="sm:w-full relative h-[508px] sm:h-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
             <OrbitRotation
               icons={techIcons}
               orbitCount={3}
