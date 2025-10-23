@@ -128,19 +128,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-white">
-      {/* Configuration Display - Remove in production */}
-      <div className="fixed top-4 right-4 z-50 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-mono max-w-xs">
-        <div className="font-bold mb-1">OrbitRotation Config</div>
-        <div>Gap: {currentConfig.orbitGap}</div>
-        <div>Center: {currentConfig.centerIconSize}</div>
-        <div>Size: {currentConfig.orbitSize}</div>
-        <div className="text-xs text-gray-300 mt-1">
-          Edit customValues in Hero.jsx
-        </div>
-      </div>
-
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 overflow-hidden">
         <div className="flex flex-col lg:flex-row min-h-screen items-center lg:items-center">
           {/* Left Section - Content */}
           <motion.div
@@ -154,53 +142,53 @@ export default function Home() {
               variants={fadeInUp}
               className="inline-flex items-center px-3 sm:px-4 py-2 rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 mb-6 sm:mb-8 relative"
             >
-              <div className="absolute -top-1 -left-1 w-2 h-2 bg-amber-500 rounded-sm"></div>
-              <div className="absolute -top-1 -right-1 w-2 h-2 bg-amber-500 rounded-sm"></div>
-              <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-amber-500 rounded-sm"></div>
-              <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-amber-500 rounded-sm"></div>
-              <span className="text-sm text-gray-700 font-medium">
-                Hello There!
+              <div className="absolute -top-1 -left-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
+              <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
+              <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
+              <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
+              <span className="text-lg text-gray-500 font-normal tracking-widest uppercase">
+                Danish Here
               </span>
             </motion.div>
 
             {/* Title */}
-            <motion.h1
+            {/* <motion.h1
               variants={fadeInUp}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-2 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 mb-2 leading-tight"
             >
               <span className="text-gray-900">I'm </span>
-              <span className="text-amber-500 font-normal relative">
+              <span className="text-blue-500 font-medium relative">
                 Danish
                 <motion.div
-                  className="absolute bottom-0 left-0 h-1 bg-amber-500"
+                  className="absolute bottom-0 left-0 h-1 bg-blue-500"
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 0.8, delay: 1.2 }}
                 />
                 ,
               </span>
-            </motion.h1>
+            </motion.h1> */}
 
             {/* Subtitle */}
-            <motion.h2
+            <motion.h1
               variants={fadeInUp}
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-2 relative"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-gray-900 mb-2 relative"
             >
               Full Stack Developer
-            </motion.h2>
+            </motion.h1>
 
             {/* Location */}
-            <motion.h3
+            <motion.h2
               variants={fadeInUp}
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6 lg:mb-8"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-gray-900 mb-6 lg:mb-8"
             >
-              Based in Pakistan.
-            </motion.h3>
+              Based in New Delhi.
+            </motion.h2>
 
             {/* Description */}
             <motion.p
               variants={fadeInUp}
-              className="text-base sm:text-lg text-gray-600 mb-8 lg:mb-12 max-w-2xl leading-relaxed"
+              className="text-base sm:text-lg text-gray-600 mb-8 lg:mb-12 max-w-xl leading-relaxed"
             >
               I'm an experienced Full Stack Developer with 2.1+ years in the
               field, collaborating with various companies and startups,
@@ -222,20 +210,6 @@ export default function Home() {
                   >
                     View My Portfolio
                   </Button>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-amber-500 hover:bg-amber-600 rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300 shadow-lg hover:shadow-xl"
-                >
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
                 </motion.div>
               </div>
 
@@ -270,6 +244,5 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-    </div>
   );
 }
