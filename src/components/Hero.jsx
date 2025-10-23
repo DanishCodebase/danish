@@ -23,6 +23,7 @@ import {
 
 import { OrbitRotation } from "@/components/ui/orbit-rotation";
 import { Button } from "@/components/ui/button";
+import { Cover } from "@/components/ui/cover";
 
 export default function Home() {
   const techIcons = [
@@ -128,31 +129,31 @@ export default function Home() {
   };
 
   return (
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 overflow-hidden">
-        <div className="flex flex-col lg:flex-row min-h-screen items-center lg:items-center">
-          {/* Left Section - Content */}
+    <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 sm:overflow-hidden overflow-x-hidden py-10 sm:py-0">
+      <div className="flex flex-col lg:flex-row min-h-screen items-center lg:items-center">
+        {/* Left Section - Content */}
+        <motion.div
+          className="w-full lg:w-1/2 lg:flex-[0.55] lg:pr-8 xl:pr-16 mb-52 lg:mb-0"
+          variants={staggerContainer}
+          initial="initial"
+          animate="animate"
+        >
+          {/* Greeting */}
           <motion.div
-            className="w-full lg:w-1/2 lg:flex-[0.55] lg:pr-8 xl:pr-16 mb-40 lg:mb-0"
-            variants={staggerContainer}
-            initial="initial"
-            animate="animate"
+            variants={fadeInUp}
+            className="flex items-center justify-center lg:justify-start px-3 sm:px-4 py-2 mb-6 sm:mb-8 relative"
           >
-            {/* Greeting */}
-            <motion.div
-              variants={fadeInUp}
-              className="inline-flex items-center px-3 sm:px-4 py-2 rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 mb-6 sm:mb-8 relative"
-            >
-              <div className="absolute -top-1 -left-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
+            {/* <div className="absolute -top-1 -left-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
               <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
               <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
-              <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-blue-500 rounded-sm"></div>
-              <span className="text-lg text-gray-500 font-normal tracking-widest uppercase">
-                Danish Here
-              </span>
-            </motion.div>
+              <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-blue-500 rounded-sm"></div> */}
+            <span className="text-3xl font-normal tracking-widest uppercase">
+              <Cover className="inline-flex items-center px-3 gap-3 text-gray-500">Danish <span>👋</span></Cover>
+            </span>
+          </motion.div>
 
-            {/* Title */}
-            {/* <motion.h1
+          {/* Title */}
+          {/* <motion.h1
               variants={fadeInUp}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 mb-2 leading-tight"
             >
@@ -169,80 +170,80 @@ export default function Home() {
               </span>
             </motion.h1> */}
 
-            {/* Subtitle */}
-            <motion.h1
-              variants={fadeInUp}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-gray-900 mb-2 relative"
-            >
-              Full Stack Developer
-            </motion.h1>
+          {/* Subtitle */}
+          <motion.h1
+            variants={fadeInUp}
+            className="text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left text-gray-900 mb-2 relative"
+          >
+            Full Stack Developer
+          </motion.h1>
 
-            {/* Location */}
-            <motion.h2
-              variants={fadeInUp}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-gray-900 mb-6 lg:mb-8"
-            >
-              Based in New Delhi.
-            </motion.h2>
+          {/* Location */}
+          <motion.h2
+            variants={fadeInUp}
+            className="text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left text-gray-900 mb-6 lg:mb-8"
+          >
+            Based in New Delhi.
+          </motion.h2>
 
-            {/* Description */}
-            <motion.p
-              variants={fadeInUp}
-              className="text-base sm:text-lg text-gray-600 mb-8 lg:mb-12 max-w-xl leading-relaxed"
-            >
-              I'm an experienced Full Stack Developer with 2.1+ years in the
-              field, collaborating with various companies and startups,
-              specializing in React.js, Next.js, and problem-solving, delivering
-              results by leveraging modern tools like Cursor IDE and Claude for
-              efficient development.
-            </motion.p>
+          {/* Description */}
+          <motion.p
+            variants={fadeInUp}
+            className="text-base sm:text-lg text-center lg:text-left text-gray-600 mb-8 lg:mb-12 max-w-xl leading-relaxed"
+          >
+            I'm an experienced Full Stack Developer with 2.1+ years in the
+            field, collaborating with various companies and startups,
+            specializing in React.js, Next.js, and problem-solving, delivering
+            results by leveraging modern tools like Cursor IDE and Claude for
+            efficient development.
+          </motion.p>
 
-            {/* Buttons */}
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start"
-            >
-              <div className="flex items-center gap-3 sm:gap-4">
-                <motion.div whileHover={buttonHover} whileTap={{ scale: 0.98 }}>
-                  <Button
-                    size="lg"
-                    className="bg-emerald-700 hover:bg-emerald-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    View My Portfolio
-                  </Button>
-                </motion.div>
-              </div>
-
+          {/* Buttons */}
+          <motion.div
+            variants={fadeInUp}
+            className="flex gap-4 sm:gap-6 items-start justify-center lg:justify-start"
+          >
+            <div className="flex items-center gap-3 sm:gap-4">
               <motion.div whileHover={buttonHover} whileTap={{ scale: 0.98 }}>
                 <Button
-                  variant="outline"
                   size="lg"
-                  className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="bg-gray-900 hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Hire Me
+                  View My Portfolio
                 </Button>
               </motion.div>
+            </div>
+
+            <motion.div whileHover={buttonHover} whileTap={{ scale: 0.98 }}>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Hire Me
+              </Button>
             </motion.div>
           </motion.div>
+        </motion.div>
 
-          {/* Right Section - OrbitRotation */}
-          <motion.div
-            className="w-full lg:w-1/2 lg:flex-[0.45] flex items-center justify-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          >
-            <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
-              <OrbitRotation
-                icons={techIcons}
-                orbitCount={3}
-                orbitGap={currentConfig.orbitGap}
-                centerIcon={centerIcon}
-                size={currentConfig.orbitSize}
-              />
-            </div>
-          </motion.div>
-        </div>
+        {/* Right Section - OrbitRotation */}
+        <motion.div
+          className="w-full lg:w-1/2 lg:flex-[0.45] flex items-center justify-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        >
+          <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
+            <OrbitRotation
+              icons={techIcons}
+              orbitCount={3}
+              orbitGap={currentConfig.orbitGap}
+              centerIcon={centerIcon}
+              size={currentConfig.orbitSize}
+            />
+          </div>
+        </motion.div>
       </div>
+    </div>
   );
 }
