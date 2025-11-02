@@ -1,5 +1,6 @@
 "use client";
 import { ReactLenis } from "lenis/react";
+import { ExternalLink } from "lucide-react";
 import { useTransform, motion, useScroll } from "motion/react";
 import { useRef } from "react";
 // import Image from 'next/image';
@@ -59,10 +60,14 @@ export default function index() {
             <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 via-transparent to-transparent"></div>
             <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
               <h1 className="2xl:text-7xl text-4xl sm:text-5xl md:text-6xl font-bold text-center tracking-tight leading-[1.1] mb-4">
-                My <span className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">Projects</span>
+                My{" "}
+                <span className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+                  Projects
+                </span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-light mt-6">
-                Explore a collection of innovative web applications and digital experiences
+                Explore a collection of innovative web applications and digital
+                experiences
               </p>
               <div className="mt-12 animate-bounce">
                 <svg
@@ -130,7 +135,7 @@ export const Card = ({
   });
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
-  
+
   return (
     <div
       ref={container}
@@ -150,12 +155,12 @@ export const Card = ({
           className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl"
           style={{ backgroundColor: color }}
         />
-        
+
         <div className="flex flex-col lg:flex-row w-full gap-6 lg:gap-8">
           {/* Image Section - Maintaining 1705:904 aspect ratio (~1.885:1) */}
-          <div 
+          <div
             className="relative w-full lg:w-[58%] rounded-xl overflow-hidden bg-gray-50 group"
-            style={{ aspectRatio: '1705/904' }}
+            style={{ aspectRatio: "1705/904" }}
           >
             <motion.div
               className="w-full h-full flex items-center justify-center"
@@ -192,17 +197,7 @@ export const Card = ({
                 transition={{ duration: 0.2 }}
               >
                 <span>View Project</span>
-                <svg
-                  className="w-5 h-5 transition-transform duration-200 group-hover/link:translate-x-1"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                <ExternalLink className="w-4 h-4" />
               </motion.a>
             </div>
           </div>
