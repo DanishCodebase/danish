@@ -101,9 +101,9 @@ export default function Home() {
           src="/Danish.png"
           alt="Danish photo"
           className={`rounded-full ${currentConfig.centerIconSize} object-cover`}
-          //   style={{
-          //     filter: "grayscale(70%)",
-          //   }}
+            style={{
+              filter: "grayscale(70%)",
+            }}
         />
       </div>
     ),
