@@ -53,9 +53,9 @@ export default function index() {
   });
   return (
     <ReactLenis root>
-      <main className="bg-white" ref={container}>
+      <main className="bg-gray-100" ref={container}>
         <>
-          <section className="text-black h-[70vh] w-full bg-white grid place-content-center relative overflow-hidden">
+          <section className="text-black h-[70vh] w-full bg-gray-100 grid place-content-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 via-transparent to-transparent"></div>
             <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
               <h1 className="2xl:text-7xl text-4xl sm:text-5xl md:text-6xl font-bold text-center tracking-tight leading-[1.1] mb-4">
@@ -81,7 +81,7 @@ export default function index() {
           </section>
         </>
 
-        <section className="text-black w-full bg-white">
+        <section className="text-black w-full bg-gray-100">
           {projects.map((project, i) => {
             const targetScale = 1 - (projects.length - i) * 0.05;
             return (
@@ -101,13 +101,13 @@ export default function index() {
           })}
         </section>
 
-        <footer className="group bg-gradient-to-b from-white to-gray-50">
+        {/* <footer className="group bg-gradient-to-b from-white to-gray-50">
           <div className="h-40 relative z-10 grid place-content-center">
             <p className="text-gray-400 text-sm font-light">
               End of projects
             </p>
           </div>
-        </footer>
+        </footer> */}
       </main>
     </ReactLenis>
   );
