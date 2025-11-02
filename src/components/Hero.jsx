@@ -2,24 +2,23 @@
 
 import { motion } from "framer-motion";
 import {
-  FaApple,
-  FaAws,
-  FaDocker,
-  FaGithub,
-  FaGoogle,
-  FaInstagram,
-  FaLinkedin,
-  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaJs,
   FaReact,
-  FaTwitter,
-  FaArrowRight,
+  FaNodeJs,
+  FaGithub,
 } from "react-icons/fa";
 import {
-  SiFacebook,
   SiNextdotjs,
-  SiRedux,
-  SiTypescript,
   SiVercel,
+  SiTailwindcss,
+  SiExpress,
+  SiMysql,
+  SiPhonepe,
+  SiRazorpay,
+  SiShadcnui,
 } from "react-icons/si";
 
 import { OrbitRotation } from "@/components/ui/orbit-rotation";
@@ -29,21 +28,21 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 export default function Home() {
   const techIcons = [
+    { Icon: FaHtml5, name: "HTML" },
+    { Icon: FaCss3Alt, name: "CSS" },
+    { Icon: FaJs, name: "Javascript" },
+    { Icon: FaBootstrap, name: "Bootstrap" },
+    { Icon: SiTailwindcss, name: "Tailwind Css" },
     { Icon: FaReact, name: "React" },
-    { Icon: FaAws, name: "AWS" },
-    { Icon: FaDocker, name: "Docker" },
     { Icon: FaNodeJs, name: "Node.js" },
+    { Icon: SiExpress, name: "Express.js" },
+    { Icon: SiMysql, name: "Mysql" },
     { Icon: SiNextdotjs, name: "Next.js" },
     { Icon: SiVercel, name: "Vercel" },
-    { Icon: SiRedux, name: "Redux" },
-    { Icon: SiTypescript, name: "TypeScript" },
     { Icon: FaGithub, name: "GitHub" },
-    { Icon: FaTwitter, name: "Twitter" },
-    { Icon: FaLinkedin, name: "LinkedIn" },
-    { Icon: FaInstagram, name: "Instagram" },
-    { Icon: FaGoogle, name: "Google" },
-    { Icon: FaApple, name: "Apple" },
-    { Icon: SiFacebook, name: "Facebook" },
+    { Icon: SiPhonepe, name: "Phonepe" },
+    { Icon: SiRazorpay, name: "Razorpay" },
+    { Icon: SiShadcnui, name: "Shadcn" },
   ];
 
   // ========================================
@@ -101,9 +100,9 @@ export default function Home() {
           src="/Danish.png"
           alt="Danish photo"
           className={`rounded-full ${currentConfig.centerIconSize} object-cover`}
-            style={{
-              filter: "grayscale(70%)",
-            }}
+          style={{
+            filter: "grayscale(70%)",
+          }}
         />
       </div>
     ),
@@ -218,7 +217,11 @@ export default function Home() {
             </div>
 
             <motion.div whileHover={buttonHover} whileTap={{ scale: 0.98 }}>
-              <ShimmerButton className="shadow-destructive" background="#eee" shimmerColor="#000000">
+              <ShimmerButton
+                className="shadow-destructive"
+                background="#eee"
+                shimmerColor="#000000"
+              >
                 <span className="text-center text-sm leading-none font-medium tracking-tight whitespace-pre-wrap text-black lg:text-lg dark:from-white dark:to-slate-900/10">
                   Hire Me
                 </span>
