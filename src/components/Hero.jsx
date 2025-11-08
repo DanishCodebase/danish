@@ -130,7 +130,7 @@ export default function Home() {
   };
 
   return (
-    <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 sm:overflow-hidden overflow-x-hidden py-10 sm:py-0">
+    <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 sm:overflow-hidden overflow-x-hidden pt-10 sm:py-0">
       <div className="flex flex-col lg:flex-row min-h-screen items-center lg:items-center">
         {/* Left Section - Content */}
         <motion.div
@@ -192,7 +192,7 @@ export default function Home() {
           {/* Description */}
           <motion.p
             variants={fadeInUp}
-            className="text-base sm:text-lg text-center lg:text-left text-gray-600 mb-8 lg:mb-12 max-w-xl leading-relaxed"
+            className="text-base sm:text-lg text-center lg:text-left text-gray-600 mb-8 lg:mb-12 max-w-xl mx-auto lg:ml-0 leading-relaxed"
           >
             I'm an experienced Full Stack Developer with 2.1+ years in the
             field, collaborating with various companies and startups,
@@ -237,7 +237,7 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          <div className="sm:w-full relative h-[508px] sm:h-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
+          <div className="sm:w-full relative h-[500px] lg:h-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
             <OrbitRotation
               icons={techIcons}
               orbitCount={3}

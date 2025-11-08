@@ -11,7 +11,7 @@ const projects = [
       "A modern web application showcasing innovative design and seamless user experience. Built with cutting-edge technologies to deliver exceptional performance and visual appeal.",
     src: "igef.png",
     link: "https://ehtasamahmadraza.vercel.app/projects/igef.png",
-    color: "#5196fd",
+    color: "#000",
   },
   {
     title: "IMM Project",
@@ -19,7 +19,7 @@ const projects = [
       "An immersive digital experience featuring elegant animations and responsive design. This project demonstrates advanced frontend development techniques and creative problem-solving.",
     src: "imm.png",
     link: "https://ehtasamahmadraza.vercel.app/projects/imm.png",
-    color: "#8f89ff",
+    color: "#000",
   },
   {
     title: "Weetoo Media Project",
@@ -27,7 +27,7 @@ const projects = [
       "A comprehensive media platform designed to engage and captivate audiences. Combining stunning visuals with intuitive navigation for an exceptional user journey.",
     src: "weetoomedia.png",
     link: "https://ehtasamahmadraza.vercel.app/projects/weetoomedia.png",
-    color: "#13006c",
+    color: "#000",
   },
   {
     title: "ColBrown School Project",
@@ -35,7 +35,7 @@ const projects = [
       "An educational platform featuring modern design principles and user-centric interface. Created to provide an engaging learning experience for students and educators.",
     src: "cbs.png",
     link: "https://ehtasamahmadraza.vercel.app/projects/cbs.png",
-    color: "#ed649e",
+    color: "#000",
   },
   {
     title: "SSIM Project",
@@ -43,7 +43,7 @@ const projects = [
       "A sophisticated web solution with attention to detail and elegant design patterns. This project showcases technical excellence and creative innovation.",
     src: "ssim.png",
     link: "https://ehtasamahmadraza.vercel.app/projects/ssim.png",
-    color: "#fd521a",
+    color: "#000",
   },
 ];
 export default function index() {
