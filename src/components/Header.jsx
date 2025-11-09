@@ -1,24 +1,51 @@
-import PillNav from "@/components/PillNav";
-const logo = "/Danish.png";
+"use client";
+import CardNav from '@/components/CardNav'
+const logo = '/Danish.png';
 
-export default function Header() {
+const Header = () => {
+  const items = [
+    {
+      label: "About",
+      bgColor: "#000",
+      textColor: "#fff",
+      // links: [
+      //   { label: "Company", ariaLabel: "About Company" },
+      //   { label: "Careers", ariaLabel: "About Careers" }
+      // ]
+    },
+    {
+      label: "Projects", 
+      bgColor: "#000",
+      textColor: "#fff",
+      // links: [
+      //   { label: "Featured", ariaLabel: "Featured Projects" },
+      //   { label: "Case Studies", ariaLabel: "Project Case Studies" }
+      // ]
+    },
+    {
+      label: "Contact",
+      bgColor: "#000", 
+      textColor: "#fff",
+      // links: [
+      //   { label: "Email", ariaLabel: "Email us" },
+      //   { label: "Twitter", ariaLabel: "Twitter" },
+      //   { label: "LinkedIn", ariaLabel: "LinkedIn" }
+      // ]
+    }
+  ];
+
   return (
-    <PillNav
+    <CardNav
       logo={logo}
       logoAlt="Company Logo"
-      items={[
-        { label: "Home", href: "/" },
-        { label: "About", href: "/about" },
-        { label: "Services", href: "/services" },
-        { label: "Contact", href: "/contact" },
-      ]}
-      activeHref="/"
-      className="custom-nav"
-      ease="power2.easeOut"
-      baseColor="#000000"
-      pillColor="#ffffff"
-      hoveredPillTextColor="#ffffff"
-      pillTextColor="#000000"
+      items={items}
+      baseColor="#fff"
+      menuColor="#000"
+      buttonBgColor="#111"
+      buttonTextColor="#fff"
+      ease="power3.out"
     />
   );
-}
+};
+
+export default Header;

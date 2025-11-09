@@ -176,7 +176,7 @@ export default function Home() {
           {/* Subtitle */}
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left text-gray-900 mb-2 relative"
+            className="text-3xl xs:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left text-gray-900 mb-2 relative"
           >
             Full Stack Developer
           </motion.h1>
@@ -184,7 +184,7 @@ export default function Home() {
           {/* Location */}
           <motion.h2
             variants={fadeInUp}
-            className="text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left text-gray-900 mb-6 lg:mb-8"
+            className="text-3xl xs:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left text-gray-900 mb-6 lg:mb-8"
           >
             Based in New Delhi.
           </motion.h2>
