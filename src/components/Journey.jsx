@@ -79,7 +79,7 @@ const educationData = [
 
 export default function Journey() {
   return (
-    <div className="py-12 bg-white">
+    <div className="py-12 px-5 sm:px-0 bg-white">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           My Journey
