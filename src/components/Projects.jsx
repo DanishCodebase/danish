@@ -218,13 +218,13 @@ export const Card = ({
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="flex flex-col lg:flex-row relative -top-[25%] w-full max-w-7xl rounded-2xl bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_80px_-15px_rgba(0,0,0,0.15)] transition-shadow duration-500 lg:p-8 sm:p-6 p-4 origin-top border border-gray-100/50"
+        className="flex flex-col lg:flex-row relative -top-[25%] w-full max-w-7xl rounded-2xl bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_80px_-15px_rgba(0,0,0,0.15)] transition-shadow duration-500 lg:p-5 sm:p-6 p-4 origin-top border border-gray-100/50"
         whileHover={{ y: -5 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
         {/* Accent border top */}
         <div
-          className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl"
+          className="absolute top-0 left-0 right-0 h-1 mx-1 rounded-2xl"
           style={{ backgroundColor: color }}
         />
 
